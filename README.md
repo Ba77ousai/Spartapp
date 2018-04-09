@@ -1,2 +1,2 @@
 # Spartapp
-Radio Player for Android
+Radio Sparta

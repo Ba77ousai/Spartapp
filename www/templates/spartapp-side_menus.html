@@ -1,0 +1,46 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-right-top" class="page-title bar-positive-900">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="spartapp-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="text-center expanded positive-900-bg">
+			<img ng-src="{{ appLogo | trustUrl }}" class="avatar motion spin fade" />
+			<div class="menu-bottom"><span ng-bind-html="appName | strHTML"></span><br/></div>
+		</ion-header-bar>
+		<ion-content class="has-expanded-header stable-bg royal-900">
+			<ion-list class="list" >
+				<ion-item class="item item-divider text-left" >
+					 {{ "Radio Player" | translate }}
+				</ion-item>
+				<ion-item  sound-touch="true"  class="menu-sparta_player item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="spartapp.sparta_player">
+					<i class="icon ion-android-volume-up"></i> {{ "Player" | translate }}
+				</ion-item>
+				<ion-item class="item item-divider text-left" >
+					 {{ "Multimedia" | translate }}
+				</ion-item>
+				<ion-item  sound-touch="true"  class="menu-live item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="spartapp.live">
+					<i class="icon ion-heart"></i> {{ "Live" | translate }}
+				</ion-item>
+				<ion-item  sound-touch="true"  class="menu-youtube item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="spartapp.youtube">
+					<i class="icon ion-social-youtube"></i> {{ "Youtube" | translate }}
+				</ion-item>
+				<ion-item class="item item-divider text-left" >
+					 {{ "Social" | translate }}
+				</ion-item>
+				<ion-item  sound-touch="true"  class="menu-menu_2 item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="spartapp.menu_2">
+					<i class="icon ion-social-twitter"></i> {{ "Social" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
